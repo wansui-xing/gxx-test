@@ -16,4 +16,6 @@ use \think\Route;
 
 Route::get('add','index/Index/create');
 
-Route::get('test','wechat/Test/index');
+Route::get('test','wechat/Test/index'); //  微信测试号接口配置信息
+
+Route::get('info','wechat/Test/create');

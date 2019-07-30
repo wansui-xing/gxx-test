@@ -2,11 +2,15 @@
 
 namespace app\wechat\controller;
 
+use think\cache\driver\Redis;
 use think\Controller;
 use think\Request;
 
 class Test extends Controller
 {
+
+    public $redis ;
+
     /**
      * 显示资源列表
      *
@@ -44,7 +48,20 @@ class Test extends Controller
      */
     public function create()
     {
-        //
+        $redis = new \Redis();
+        $result = $redis->connect(config('redis.host'), config('redis.port'));
+        $selectRedis =$redis->select(1);//选择数据库3
+        $data  =[];
+        $data['time'] = time();
+//        $data['access_token'] = $accessToken;
+        print_r(time());
+//        $get_access_token = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='
+//            .config('wechat.appID').'&secret='.config('wechat.appSecret');
+//        $accessToken= curl_get($get_access_token,true);
+//        if(isset($accessToken['access_token'])){
+//            $result = $redis->set('access_token',$accessToken);
+//        }
+//        print_r($accessToken);die;
     }
 
     /**
