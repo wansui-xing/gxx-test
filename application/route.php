@@ -16,6 +16,29 @@ use \think\Route;
 
 Route::get('add','index/Index/create');
 
-Route::get('test','wechat/Test/index'); //  微信测试号接口配置信息
+Route::get('check_valid','wechat/Test/firstValid'); //  微信测试号接口配置信息 (验证当前接口是否有效)
 
-Route::get('info','wechat/Test/create');
+Route::get('add','wechat/Test/create');
+Route::get('del','wechat/Test/delete');
+Route::get('list','wechat/Test/getUserList');
+Route::get('info','wechat/Test/getUserInfo');
+Route::get('qr_code','wechat/Test/qrCode');
+
+Route::get('auth','wechat/Test/authorization');
+Route::get('get_openid','wechat/Test/getOpenId');
+Route::get('token','wechat/Test/pageToken');
+
+
+
+Route::get('index','wechat/Gxx/index');
+
+
+
+
+
+
+Route::get('aa','wechat/Test/test');
+
+
+Route::post('msg','wechat/Test/responseMsg');
+

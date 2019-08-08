@@ -396,10 +396,7 @@ function curl_post( $url,  $params,  $header = 'json')
             $data_string = http_build_query($params);
             break;
         case 'json':
-
-            $data_string = json_encode($params);
-
-
+            $data_string = json_encode($params,JSON_UNESCAPED_UNICODE);
             $http_header[] = 'Content-Type: application/json';
             break;
     }
