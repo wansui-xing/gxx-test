@@ -175,7 +175,7 @@ class Test extends Controller
 //        $postxml = file_get_contents('php://input');
 //        $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
 //        $postStr = file_put_contents('weChat.txt','asdasdaldhakdak看见啊哈哈地方看见啊回复');
-        file_put_contents('nnnn.txt', 123);
+//        file_put_contents('nnnn.txt', 123);
 //        return true;
 //        libxml_disable_entity_loader(true);
 //
